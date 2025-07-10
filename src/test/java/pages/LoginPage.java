@@ -2,7 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 
-public class LoginPage {
+public class LoginPage extends BasePage{
 
     public String url = "https://www.rokomari.com/login";
 
@@ -16,4 +16,5 @@ public class LoginPage {
     public By LoginButton = By.xpath("//form[@id='login-form']//button[@type='submit'][normalize-space()='Login']");
     public By errorPassword = By.xpath("//div[@id='js--message']//p");
     public By user_icon = By.xpath("//img[@alt='user-image']");
+    public By nextLoginButton = By.xpath("//button[@id='js--btn-next']");
 }

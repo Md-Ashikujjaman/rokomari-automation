@@ -29,6 +29,7 @@ public class DriverSetup {
         WebDriver driver = getBrowser(browser_name);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         setDriver(driver);
+        driver.manage().window().maximize();
     }
 
     public WebDriver getBrowser(String name){
