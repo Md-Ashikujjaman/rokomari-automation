@@ -17,8 +17,8 @@ public class TestHomepage extends DriverSetup {
     @Test
     public void testLoginButton(){
         homePage.loadPage(homePage.url);
-        Assert.assertEquals(homePage.getElementText(homePage.SigninButton), "Sign In");
-        Assert.assertTrue(homePage.getElement(homePage.SigninButton).isEnabled());
+        Assert.assertEquals(homePage.getElementText(homePage.SignInButton), "Sign In");
+        Assert.assertTrue(homePage.getElement(homePage.SignInButton).isEnabled());
     }
 
 }

@@ -13,9 +13,11 @@ public class BookPage extends HomePage{
     public By categoriesContemporaryNovel = By.xpath("//label[contains(text(),'সমকালীন উপন্যাস')]");
     public By paginationElement = By.xpath("//div[@class='pagination']");
     public By paginationRight = By.xpath("//i[@class='ion-chevron-right']");
-    public By bookMane = By.xpath("//div[@title='শুভ্র গেছে বনে হুমায়ূন আহমেদ']");
-    public By addToCard = By.xpath("(//button[contains(text(),'Add to Cart')])[1]");
+    public By bookForBye = By.xpath("//body//div[@class=\"browse__content-books-wrapper\"]/div[1]/div[2]");
+    public By addToCard = By.xpath("(//button[contains(text(),'Add to Cart')])[2]");
     public By cardMenu = By.xpath("//a[@id='js-cart-menu']");
+    public By cardQuantity = By.xpath("//span[@class='js--cart-quantity']");
+
 
 
 }
