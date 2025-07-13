@@ -1,16 +1,13 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
 
 public class HomePage extends BasePage {
 
     public String url = "https://www.rokomari.com";
     public String title = "Rokomari.com - Online Book, Electronics & Super Shop in Bangladesh";
     public By menuBook = By.xpath("(//span[contains(text(),'বই')])[2]");
-    public By LoginButton = By.xpath("(//a[contains(text(),'Sign In')])");
+    public By SigninButton = By.xpath("(//a[contains(text(),'Sign In')])");
     public By user_icon = By.xpath("//img[@alt='user-image']");
     public By PopUpClose = By.xpath("//div[@class='modal_modal__RCZrz']//button");
     public By rockSterPopup = By.xpath("//div[@id=\"ts--desktop-rok-star\"]");

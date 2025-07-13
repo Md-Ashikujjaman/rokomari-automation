@@ -1,5 +1,6 @@
 package utilities;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -33,14 +34,19 @@ public class DriverSetup {
     }
 
     public WebDriver getBrowser(String name){
-        if (name.equalsIgnoreCase("Edge"))
+        if (name.equalsIgnoreCase("edge")) {
+            WebDriverManager.edgedriver().setup();
             return new EdgeDriver();
-        else if (name.equalsIgnoreCase("chrome"))
+        }
+        else if (name.equalsIgnoreCase("chrome")) {
+            WebDriverManager.chromedriver().setup();
             return new ChromeDriver();
-        else if (name.equalsIgnoreCase("firefox"))
+        }
+        else if (name.equalsIgnoreCase("firefox")) {
+            WebDriverManager.firefoxdriver().setup();
             return new FirefoxDriver();
-        else {
-            throw new RuntimeException("Browser is not available with the given name: " + name);
+        } else {
+            throw new RuntimeException("Browser not supported: " + name);
         }
     }
 
