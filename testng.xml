@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="D:/IT Traning BD/Web_Autometion/rokomari-automation/src/test/java/testcases">
+        <classes>
+            <class name="testcases.AllTestPages">
+                <methods>
+                    <include name="TestUserCanLoginWithValidCredentials"/>
+                    <include name="TestUserCanNotLoginWithInValidCredentials"/>
+                    <include name="TestAuthorSelection"/>
+                    <include name="TestCheckOutProcess"/>
+                    <include name="TestOrderConfirmProcessWithAddress"/>
+                    <include name="TestLogOut"/>
+                </methods>
+            </class>
+            <class name="testcases.TestHomepage">
+                <methods>
+                    <exclude name="TestHomePageTitle"/>
+                    <exclude name="testLoginButton"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
