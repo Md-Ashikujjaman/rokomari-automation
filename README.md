@@ -1,95 +1,134 @@
 
-# Rokomari Automation Project
+# 🛒 Rokomari.com Web Automation Project
 
-This is a practice web automation project for testing the core shopping flow of [Rokomari.com](https://www.rokomari.com/) using **Selenium WebDriver**, **Java**, **JUnit**, and **Maven**.
-
----
-
-## 🧪 Test Scenario
-
-The test simulates a user shopping on Rokomari. It includes:
-
-1. Sign Up using Google
-2. Select লেখক (Authors) from the main menu
-3. Select "হুমায়ুন আহমেদ" as the author
-4. Apply filters: 
-   - সমকালীন উপন্যাস  
-   - রচনা সংকলন ও সমগ্র
-5. Scroll to the bottom and go to the next page (if available)
-6. Add a book to the cart
-7. View the cart
-8. Proceed to checkout
-9. Provide shipping information (manually or via automation)
-10. Log out
+This is my first end-to-end **Web Automation Testing Project** using **Selenium WebDriver**, implemented with the **Page Object Model (POM)** design pattern. The automation test simulates a complete shopping flow on [Rokomari.com](https://www.rokomari.com/), from login to checkout and logout.
 
 ---
 
-## 🛠 Tech Stack
+## 📌 Project Overview
 
-- **Language:** Java
-- **Automation Framework:** Selenium WebDriver
-- **Testing Framework:** JUnit 5
-- **Build Tool:** Maven
-- **Browser:** Chrome
+**Tech Stack:**
+
+- Language: Java
+- Build Tool: Maven
+- Testing Framework: TestNG
+- Automation Tool: Selenium WebDriver
+- Design Pattern: Page Object Model (POM)
+- Reporting Tool: Allure Report
+- Browser Support: Chrome, Edge, Firefox (via WebDriverManager)
 
 ---
 
-## 📁 Project Structure
+## ✅ Test Scenarios Covered
+
+1. **Invalid Login Attempt**
+2. **Valid Login with Credentials**
+3. **Author Selection & Book Filtering**
+4. **Add to Cart & Cart Verification**
+5. **Checkout Process**
+6. **Shipping Address Input**
+7. **Logout Process**
+
+---
+
+## 📁 Project Structure (POM)
 
 ```
 rokomari-automation/
+├── pages/
+│   ├── BasePage.java
+│   ├── HomePage.java
+│   ├── LoginPage.java
+│   ├── BookPage.java
+│   ├── CardPage.java
+│   └── ShippingPage.java
+├── testcases/
+│   └── AllTestPages.java
+├── utilities/
+│   └── DriverSetup.java
 ├── pom.xml
-├── README.md
-├── src/
-│   ├── main/java/pages/
-│   │   ├── LoginPage.java
-│   │   ├── AuthorPage.java
-│   │   ├── BookPage.java
-│   │   └── CartPage.java
-│   └── test/java/
-│       ├── BaseTest.java (optional)
-│       └── RokomariFlowTest.java
+└── README.md
 ```
 
 ---
 
-## ▶️ How to Run
+## 🧪 Allure Test Report
 
-1. **Clone this repo**
-   ```bash
-   git clone https://github.com/your-username/rokomari-automation.git
-   cd rokomari-automation
-   ```
+After test execution, the test results are captured and visualized using Allure Reporting.
 
-2. **Ensure you have:**
-   - Java JDK 17+
-   - Maven
-   - Chrome browser installed
-   - ChromeDriver in your system PATH
+**To Generate Allure Report:**
+```bash
+allure generate allure-results --clean -o allure-report
+allure serve allure-results
+```
 
-3. **Run the test using Maven**
-   ```bash
-   mvn test
-   ```
+📸 Sample Report Screenshot:
+> (Screenshot upcoming)  
+> `![Allure Report Screenshot](./screenshots/allure_report.png)`
 
 ---
 
-## ⚠️ Notes
+## 🔄 How the Flow Works
 
-- Google Sign-In requires handling popup windows. You can skip or mock this step if you face automation restrictions.
-- Rokomari may change their site structure. Update XPaths and locators accordingly.
-- If you're filling shipping information, add dummy input fields handling in `CartPage.java`.
+1. Launch Browser
+2. Navigate to Home Page
+3. Close any popup (if visible)
+4. Login with provided credentials
+5. Navigate to "Book" Menu → Select Author (e.g., হুমায়ূন আহমেদ)
+6. Apply filters (e.g., category: সমকালীন উপন্যাস)
+7. Add book to cart
+8. Proceed to checkout
+9. Fill shipping details
+10. Confirm order
+11. Logout
 
 ---
 
-## 📌 Author
+## 🧑 Author
 
 **Md. Ashikujjaman**  
-Automation Tester | Learning QA Engineering  
-[LinkedIn](#) | [GitHub](https://github.com/your-username)
+SQA Engineer | Test Automation Enthusiast  
+📧 Email: [ashik35uap@gmail.com](mailto:ashik35uap@gmail.com)  
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/mdashikujjaman/)  
+📦 [GitHub Projects](https://github.com/Md-Ashikujjaman/)
 
 ---
 
-## 📃 License
+## 📌 Note
 
-This project is for **educational and practice purposes only**. Not affiliated with Rokomari.com.
+- Credentials used in this project are for testing purpose only.
+- The project is designed and implemented for educational and portfolio presentation.
+
+---
+
+## 📷 Project Preview (Upcoming)
+
+> Sample test run screenshots, login page, cart page, and Allure dashboard.
+
+---
+
+## 🚀 Run the Test
+
+```bash
+# Run tests with TestNG
+mvn clean test
+```
+
+```bash
+# Generate Allure Report
+allure generate allure-results --clean -o allure-report
+allure serve allure-results
+```
+
+---
+
+## 🌟 What I Learned
+
+- Selenium WebDriver fundamentals
+- TestNG for test lifecycle management
+- Page Object Model for test scalability
+- Handling popups, dropdowns, and dynamic elements
+- End-to-End Automation flow
+- Allure report integration
+
+---
