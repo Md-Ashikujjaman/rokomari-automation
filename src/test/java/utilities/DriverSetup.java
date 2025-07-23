@@ -17,13 +17,15 @@ public class DriverSetup {
     private static final ThreadLocal<WebDriver>DRIVER_THREAD_LOCAL = new ThreadLocal<>();
 
     public static void setDriver(WebDriver driver){
+
         DriverSetup.DRIVER_THREAD_LOCAL.set(driver);
     }
     public static WebDriver getDriver(){
+
         return DRIVER_THREAD_LOCAL.get();
     }
 
-    public WebDriver driver;
+
 
     @BeforeSuite
     public void startBrowser(){

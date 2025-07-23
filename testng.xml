@@ -7,7 +7,8 @@
             <class name="testcases.AllTestPages">
                 <methods>
                     <include name="TestUserCanLoginWithValidCredentials"/>
-                    <include name="TestUserCanNotLoginWithInValidCredentials"/>
+                    <include name="TestUserCanNotLoginWithInValidPassword"/>
+                    <include name="TestUserCanNotLoginWithInValidUsernameOrOtp"/>
                     <include name="TestAuthorSelection"/>
                     <include name="TestCheckOutProcess"/>
                     <include name="TestOrderConfirmProcessWithAddress"/>
