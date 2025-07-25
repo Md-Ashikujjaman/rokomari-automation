@@ -64,10 +64,10 @@ allure serve allure-results
 
 📸 Sample Report Screenshot:
 > (Screenshot upcoming)  
-> `![Allure Report](https://github.com/Md-Ashikujjaman/rokomari-automation/blob/main/images/Allure_Report.PNG)`
-> `![Allure Report Suites](https://github.com/Md-Ashikujjaman/rokomari-automation/blob/main/images/Suites.PNG)`
-> `![Allure Report Graph](https://github.com/Md-Ashikujjaman/rokomari-automation/blob/main/images/Graph.PNG)`
-> `![Allure Report Packages](https://github.com/Md-Ashikujjaman/rokomari-automation/blob/main/images/Packages.PNG)`
+> ![Allure Report](https://github.com/Md-Ashikujjaman/rokomari-automation/blob/main/images/Allure_Report.PNG)
+> ![Allure Report Suites](https://github.com/Md-Ashikujjaman/rokomari-automation/blob/main/images/Suites.PNG)
+> ![Allure Report Graph](https://github.com/Md-Ashikujjaman/rokomari-automation/blob/main/images/Graph.PNG)
+> ![Allure Report Packages](https://github.com/Md-Ashikujjaman/rokomari-automation/blob/main/images/Packages.PNG)
 
 ---
 
